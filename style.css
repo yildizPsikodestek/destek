@@ -1,0 +1,631 @@
+/* --- 1. DEĞİŞKENLER VE TEMEL AYARLAR --- */
+:root {
+    --ana-renk: #5dade2;       /* Güven veren mavi */
+    --ana-renk-koyu: #2980b9;
+    --koyu-metin: #2c3e50;     /* Kurumsal lacivert */
+    --gri-metin: #7f8c8d;      /* Yumuşak gri */
+    --arka-plan: #f8fbff;
+    --beyaz: #ffffff;
+    --gecis: all 0.3s ease;
+    --shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--koyu-metin);
+    background-color: var(--arka-plan);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h2.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--ana-renk);
+}
+
+/* --- 2. NAVİGASYON --- */
+header {
+    background: var(--beyaz);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--koyu-metin);
+}
+
+.logo span { color: var(--ana-renk); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--koyu-metin);
+    font-weight: 500;
+    transition: var(--gecis);
+}
+
+.nav-links a:hover { color: var(--ana-renk); }
+
+/* --- 3. HERO VE BUTONLAR --- */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #eef7ff 0%, #d6ecfa 100%);
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+
+.cta-button, .btn-submit, .btn-send, .btn-gonder {
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--ana-renk);
+    color: var(--beyaz);
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--gecis);
+    text-align: center;
+}
+
+.cta-button:hover, .btn-gonder:hover {
+    background: var(--ana-renk-koyu);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(93, 173, 226, 0.4);
+}
+
+/* --- 4. YAN YANA BÖLÜMLER (MISYON/HAKKIMIZDA) --- */
+.yan-yana-bolum {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 0;
+}
+
+.resim-alani, .hizmet-resim { flex: 1; }
+
+.resim-alani img, .hizmet-resim img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.metin-alani, .hizmet-yazi { flex: 1.2; }
+
+/* --- 5. HİZMETLER (GRID VE KARTLAR) --- */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.service-card-small {
+    flex: 0 1 calc(33.333% - 30px);
+    min-width: 280px;
+    background: var(--beyaz);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: var(--gecis);
+    border: 1px solid #eee;
+}
+
+.service-card-small:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+}
+
+.service-card-small img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Hizmet Detay (Zig-Zag) */
+.hizmet-detay-kart {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    min-height: 60vh;
+    padding: 60px;
+    background: var(--beyaz);
+    border-radius: 30px;
+    margin-bottom: 40px;
+}
+
+.hizmet-detay-kart.ters { flex-direction: row-reverse; }
+
+.hizmet-detay-kart:target {
+    border: 2px solid var(--ana-renk);
+    background-color: #f0faff;
+    transform: scale(1.01);
+}
+
+/* --- 6. İLETİŞİM VE FOOTER ÜSTÜ TASARIMI --- */
+
+/* A - İletişim Sayfası İçin Genel Ayarlar (Haritalı Bölüm) */
+.iletisim-grid {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+    align-items: flex-start;
+}
+
+.bilgi-kart {
+    background: #fdfdfd;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border-left: 5px solid var(--ana-renk);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+/* B - ANA SAYFA: FOOTER ÜSTÜ PROFESYONEL YAPI (HARİTASIZ) */
+.footer-ustu-iletisim {
+    padding: 100px 0;
+    background-color: #ffffff;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Yan yana gelmeyi zorlayan ana kapsayıcı */
+.flex-container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.iletisim-yazi {
+    flex: 1;
+    max-width: 45%;
+}
+
+.iletisim-yazi h2 {
+    text-align: left;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    color: var(--koyu-metin);
+    margin-bottom: 20px;
+}
+
+.iletisim-form-kutusu {
+    flex: 1.2;
+    background: #ffffff;
+    padding: 50px; /* Alan kaplaması için artırdık */
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.07);
+    border: 1px solid #f7f9fc;
+}
+
+/* Form Elemanları (Hem ana sayfa hem iletişim sayfası için ortak) */
+.form-row, .form-grup {
+    margin-bottom: 20px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 15px;
+    border: 1.5px solid #eef2f6;
+    border-radius: 12px;
+    background-color: #f9fbfe;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--gecis);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--ana-renk);
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 5px 15px rgba(93, 173, 226, 0.1);
+}
+
+/* Butonun Güçlü Hali */
+.btn-premium, .btn-gonder, .btn-submit {
+    width: 100%;
+    padding: 18px;
+    background: var(--ana-renk);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(93, 173, 226, 0.2);
+}
+
+.btn-premium:hover {
+    background: var(--ana-renk-koyu);
+    transform: translateY(-3px);
+}
+
+/* MOBİL AYARI: Sadece 768px altında alt alta düşsün */
+@media (max-width: 992px) {
+    .flex-container {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .iletisim-yazi, .iletisim-form-kutusu {
+        max-width: 100%;
+    }
+    .iletisim-yazi h2 {
+        text-align: center;
+    }
+}
+
+/* --- 7. AKORDİYON (SSS) --- */
+.accordion-item { border-bottom: 1px solid #eee; }
+
+.accordion-header {
+    width: 100%;
+    padding: 20px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.accordion-item.active .accordion-header { color: var(--ana-renk); }
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-item.active .accordion-content { max-height: 200px; padding: 10px 20px 20px; }
+
+/* --- 8. FOOTER --- */
+footer {
+    background: linear-gradient(135deg, #eef7ff 0%, #d6ecfa 100%);
+    padding: 60px 0 20px;
+    margin-top: 60px;
+    border-top: 1px solid #dee2e6;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-box { flex: 1; min-width: 250px; }
+
+.footer-box h3 { margin-bottom: 20px; color: var(--ana-renk-koyu); }
+
+.footer-box ul { list-style: none; }
+
+.footer-box ul li a {
+    text-decoration: none;
+    color: var(--koyu-metin);
+    transition: var(--gecis);
+}
+
+.footer-box ul li a:hover { color: var(--ana-renk); padding-left: 5px; }
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #dee2e6;
+    font-size: 0.9rem;
+}
+
+/* --- 9. RESPONSIVE (MOBIL) --- */
+@media (max-width: 992px) {
+    .service-card-small { flex: 0 1 calc(50% - 30px); }
+}
+
+@media (max-width: 768px) {
+    .navbar, .yan-yana-bolum, .hizmet-detay-kart, .iletisim-grid, .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero h1 { font-size: 2.5rem; }
+    .service-card-small { flex: 0 1 100%; }
+    .hizmet-detay-kart.ters { flex-direction: column; }
+}
+
+/* --- PROFESYONEL RANDEVU FORMU (AKSIYON KATMANI) --- */
+.contact-form-container {
+    flex: 1.2; /* Formun kapladığı alanı biraz daha artırdık */
+    background: #ffffff;
+    padding: 50px; /* İç boşluğu artırarak daha ferah yaptık */
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06); /* Modern ve yumuşak gölge */
+    border: 1px solid #f1f4f8;
+}
+
+#appointment-form .form-group {
+    margin-bottom: 25px; /* Elemanlar arası boşluğu artırdık */
+}
+
+#appointment-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--koyu-metin);
+    font-size: 0.95rem;
+}
+
+#appointment-form input, 
+#appointment-form select, 
+#appointment-form textarea {
+    width: 100%;
+    padding: 16px 20px; /* Daha yüksek ve geniş giriş alanları */
+    border: 1.5px solid #eef2f6;
+    background-color: #f9fbff; /* Hafif bir mavi-beyaz tonu */
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#appointment-form input:focus, 
+#appointment-form select:focus, 
+#appointment-form textarea:focus {
+    border-color: var(--ana-renk);
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(93, 173, 226, 0.1);
+    outline: none;
+}
+
+.iletisim-kapsayici {
+    display: flex;          /* İçindekileri yan yana getirir */
+    justify-content: space-between; /* Birini en sola, diğerini en sağa iter */
+    align-items: flex-start; /* Yukarıdan hizalar */
+    gap: 50px;              /* Aralarına biraz nefes alacak boşluk koyar */
+    width: 100%;            /* Tüm alanı kapla der */
+}
+
+.sol-bilgiler {
+    flex: 1;                /* Alanın bir kısmını kaplar */
+}
+
+.sag-form {
+    flex: 1.5;              /* Formun sağda daha geniş ve baskın durmasını sağlar */
+}
+
+/* Telefonlarda bozulmasın diye (Responsive) */
+@media (max-width: 768px) {
+    .iletisim-kapsayici {
+        flex-direction: column; /* Mobilde tekrar alt alta gelirler */
+    }
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:#f3f3f3;
+}
+
+/* HERO */
+
+.hero{
+    background: linear-gradient(135deg,#14b8f5,#1ea4f2);
+    color:white;
+    padding:80px 60px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.breadcrumb{
+    font-size:24px;
+}
+
+/* FAQ */
+
+.faq-container{
+    width:90%;
+    max-width:1200px;
+    margin:70px auto;
+}
+
+.faq-item{
+    border-bottom:1px solid #d9d9d9;
+    background:#f8fbff;
+}
+
+.faq-question{
+    width:100%;
+    padding:35px 20px;
+    border:none;
+    background:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    font-size:32px;
+    transition:0.3s;
+}
+
+.faq-question:hover{
+    background:#efefef;
+}
+
+.icon{
+    font-size:50px;
+    transition:0.3s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
+    padding:0 20px;
+    background:white;
+}
+
+.faq-answer p{
+    padding:25px 0;
+    font-size:22px;
+    line-height:1.7;
+    color:#444;
+}
+
+/* ACTIVE */
+
+.faq-item.active .faq-answer{
+    max-height:300px;
+}
+
+.faq-item.active .icon{
+    transform:rotate(45deg);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero{
+    padding:50px 25px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.breadcrumb{
+    font-size:18px;
+}
+
+.faq-question{
+    font-size:22px;
+    padding:25px 10px;
+}
+
+.icon{
+    font-size:35px;
+}
+
+.faq-answer p{
+    font-size:18px;
+}
+
+}
+
+
+/* --- İLETİŞİM SAYFASI FORM BOYUTU DÜZELTME --- */
+
+/* Form kutusunun genel genişliğini koruyalım */
+.iletisim-form-alani {
+    flex: 1.2;
+    background: var(--beyaz);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Kutucukların (Input & Textarea) Boyutlarını Eski Haline Getiriyoruz */
+.iletisim-formu .form-grup input, 
+.iletisim-formu .form-grup textarea {
+    width: 100% !important; /* Kısalmayı engellemek için tam genişlik */
+    padding: 16px 20px !important; /* İç boşluğu artırarak o dolgun hali geri getiriyoruz */
+    font-size: 1rem !important;
+    border: 1px solid #e1e8ed !important;
+    border-radius: 10px !important;
+    background: #f9fbfe !important;
+    box-sizing: border-box !important; /* Padding'in kutuyu daraltmasını engeller */
+    display: block !important;
+    margin-top: 8px !important;
+}
+
+/* Mesaj kutusunun yüksekliğini sabitleyelim */
+.iletisim-formu .form-grup textarea {
+    min-height: 160px !important;
+    resize: vertical; /* Sadece dikeyde büyütülebilsin, yapıyı bozmasın */
+}
+
+/* Butonun duruşunu eski heybetine getiriyoruz */
+.btn-gonder {
+    width: 100% !important;
+    padding: 18px !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    margin-top: 15px !important;
+    border-radius: 10px !important;
+    cursor: pointer;
+    transition: var(--gecis);
+}
+
+/* Başarı mesajı geldiğinde kutunun sönük durmaması için */
+.iletisim-form-alani div h2 {
+    font-size: 2rem !important;
+    margin-top: 10px;
+}
+
+
+/* İçi dolu olan asıl iletişim bölümüne alt boşluk veriyoruz */
+.footer-ustu-iletisim {
+    padding-top: 80px !important;    /* Üstten ferahlık */
+    padding-bottom: 100px !important; /* Footer ile arasını açan asıl yer burası */
+    margin-bottom: 0 !important;
+}
+
+/* Footer'ın üst kısmına da biraz nefes aldıralım */
+footer {
+    margin-top: 0 !important;
+    border-top: 1px solid #f0f0f0; /* Zarif bir ayırıcı çizgi */
+}
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | PsikoDestek Ankara</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Psiko<span>Destek</span></div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımda</a></li>
+                <li><a href="hizmetler.html">Hizmetler</a></li>
+                <li><a href="sikcasorulansorular.html">Sıkça Sorulan Sorular</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="iletisim-sayfasi">
+            <h2 class="section-title">Bizimle İletişime Geçin</h2>
+            
+            <div class="iletisim-grid">
+                <div class="iletisim-bilgi">
+                    <div class="bilgi-kart">
+                        <h3>Klinik Bilgilerimiz</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Adres:</strong> Atatürk Bulvarı, No:123, Çankaya / ANKARA</p>
+                        <p><i class="fas fa-phone"></i> <strong>Telefon:</strong> +90 532 532 00 00</p>
+                        <p><i class="fas fa-envelope"></i> <strong>E-posta:</strong> yildiz@psikodestek.com</p>
+                        <p><i class="fas fa-clock"></i> <strong>Çalışma Saatleri:</strong> 09:00 - 18:00</p>
+                    </div>
+                    
+                    <div class="harita-alani">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.4447477141513!2d32.85195617654522!3d39.9314486850259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34e96e95995c1%3A0x24d671f1de4b891d!2sAtat%C3%BCrk%20Blv.%2C%20Ankara!5e0!3m2!1str!2str!4v1715270000000!5m2!1str!2str" 
+                            width="100%" height="350" style="border:0; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);" 
+                            allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="iletisim-form-alani">
+    <form action="#" class="iletisim-formu" id="appointment-form">
+        <div class="form-grup">
+            <label>Adınız Soyadınız</label>
+            <input type="text" placeholder="Adınızı giriniz..." required>
+        </div>
+        <div class="form-grup">
+            <label>E-posta Adresiniz</label>
+            <input type="email" placeholder="E-posta adresinizi giriniz..." required>
+        </div>
+        <div class="form-grup">
+            <label>Konu</label>
+            <input type="text" placeholder="Mesajınızın konusu...">
+        </div>
+        <div class="form-grup">
+            <label>Mesajınız</label>
+            <textarea rows="5" placeholder="Size nasıl yardımcı olabiliriz?" required></textarea>
+        </div>
+        <button type="submit" class="btn-gonder">Mesajı Gönder</button>
+    </form>
+</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-box">
+                <div class="logo">Psiko<span>Destek</span></div>
+                <p>Ankara'nın merkezinde uzman kadromuzla yanınızdayız.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Hızlı Linkler</h3>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                    <li><a href="sikcasorulansorular.html">Sıkça Sorulan Sorular</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3>İletişim</h3>
+                <p>Atatürk Bulvarı, Çankaya/Ankara</p>
+                <p>+90 532 532 00 00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PsikoDestek - Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+
+   
+
+    <script>
+document.getElementById('appointment-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Sayfanın yenilenmesini durdurur
+
+    // Form kutusunu seçiyoruz
+    const formKutusu = document.querySelector('.iletisim-form-alani');
+    
+    // İçeriği başarı mesajı ile değiştiriyoruz
+    formKutusu.innerHTML = `
+        <div style="text-align: center; padding: 60px 20px; background: #ffffff; border-radius: 20px; animation: fadeIn 0.5s ease;">
+            <div style="font-size: 60px; color: #5dade2; margin-bottom: 20px;">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 style="color: #2c3e50; margin-bottom: 15px;">Mesajınız İletildi!</h2>
+            <p style="color: #7f8c8d; font-size: 1.1rem; line-height: 1.6;">
+                Teşekkür ederiz. Uzman ekibimiz en kısa sürede belirttiğiniz e-posta adresi üzerinden size geri dönüş sağlayacaktır.
+            </p>
+            <button onclick="location.reload()" style="margin-top: 30px; background: #5dade2; color: #fff; border: none; padding: 12px 30px; border-radius: 10px; cursor: pointer; font-weight: 600; transition: 0.3s;">
+                Ana Sayfaya Dön veya Tekrar Yaz
+            </button>
+        </div>
+    `;
+});
+</script>
+
+  
+
+</body>
+</html>
+    

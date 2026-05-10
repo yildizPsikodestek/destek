@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YILDIZ PSİKOLOG | PsikoDestek</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigasyon: Rehberdeki "Kullanılabilirlik" için net menü -->
+    <header>
+       <nav class="navbar">
+    <div class="logo">Psiko<span>Destek</span></div>
+    
+    <ul class="nav-links">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="hizmetler.html">Hizmetler</a></li>
+        <li><a href="sikcasorulansorular.html">Sıkça Sorulan Sorular</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <main>
+        <!-- Hero Section: Ana mesajın verildiği bölüm -->
+        <section id="anasayfa" class="hero">
+            <div class="hero-content">
+                <h1>Kendinize Bir Adım Atın</h1>
+                <p>Modern hayatın getirdiği karmaşada, ruhsal dengenizi birlikte bulalım.</p>
+                <a href="javascript:void(0)" onclick="document.querySelector('.footer-ustu-iletisim').scrollIntoView({behavior: 'smooth'})" class="cta-button">Ücretsiz Ön Görüşme Al</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Misyonumuz Bölümü: Bilgi verme ve güven oluşturma amaçlı -->
+<section id="misyonumuz" class="container">
+    <div class="yan-yana-bolum">
+        <div class="resim-alani">
+            <img src="assets/img/misyon.jpg.jpeg" alt="Misyonumuz" class="service-img">
+        </div>
+        <div class="metin-alani">
+            <h2>MİSYONUMUZ</h2>
+            <p>
+                Bireylerin ruhsal sağlıklarını korumak ve geliştirmek adına, bilimsel temellere dayanan, 
+                etik ilkelerden ödün vermeyen ve danışan odaklı bir yaklaşım sergiliyoruz. 
+                Her bireyin içsel potansiyelini keşfetmesine destek olmayı misyon edindik.
+            </p>
+            <p>
+                Ankara ve çevresinde, toplumun her kesimine ulaşılabilir ve kaliteli 
+                psikolojik danışmanlık hizmeti sunarak yaşam kalitesini artırmayı hedefliyoruz.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="hizmetler-onizleme" class="container">
+    <h2 class="section-title">Hizmetlerimiz</h2>
+    <div class="services-grid">
+        
+        <div class="service-card-small">
+            <img src="assets/img/bireyselterapi.jpg.jpeg" alt="Bireysel Terapi">
+            <h3>Bireysel Terapi</h3>
+            <a href="hizmetler.html#bireysel" class="btn-detay">Detaylı Bilgi</a>
+        </div>
+
+        <div class="service-card-small">
+            <img src="assets/img/aileterapisi.jpg.jpeg" alt="Aile Terapisi">
+            <h3>Aile Terapisi</h3>
+            <a href="hizmetler.html#aile" class="btn-detay">Detaylı Bilgi</a>
+        </div>
+
+        <div class="service-card-small">
+            <img src="assets/img/ergenterapisi.jpg.jpeg" alt="Ergen Terapisi">
+            <h3>Ergen Terapisi</h3>
+            <a href="hizmetler.html#ergen" class="btn-detay">Detaylı Bilgi</a>
+        </div>
+
+        <div class="service-card-small">
+            <img src="assets/img/pedagodanisman.jpg.jpeg" alt="Pedagojik Danışmanlık">
+            <h3>Çocuk Terapisi</h3>
+            <a href="hizmetler.html#pedago" class="btn-detay">Detaylı Bilgi</a>
+        </div>
+
+        <div class="service-card-small">
+            <img src="assets/img/onlinedanisman.jpg.jpeg" alt="Online Terapi">
+            <h3>Online Terapi</h3>
+            <a href="hizmetler.html#online" class="btn-detay">Detaylı Bilgi</a>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="footer-ustu-iletisim">
+    <div class="container flex-container">
+        
+        <div class="iletisim-yazi">
+            <h2>Başka Sorularınız mı var?</h2>
+            <p>İster telefon ile arayıp sorabilir, isterseniz formu doldurarak iletişime geçebilirsiniz.</p>
+            <br>
+            
+            <div class="kisa-bilgi">
+                <p><i class="fas fa-phone-alt"></i> +90 532 532 00 00</p>
+                <p><i class="fas fa-envelope"></i> yildiz@psikodestek.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Atatürk Bulvarı, Çankaya/Ankara</p>
+            </div>
+        </div>
+
+        
+        <div class="iletisim-form-kutusu">
+            <form id="appointment-form">
+                <h1>İLETİŞİM</h1>
+                <br>
+                <div class="form-row">
+                    <input type="text" placeholder="Adınız Soyadınız" required>
+                </div>
+                <div class="form-row">
+                    <input type="email" placeholder="E-posta Adresiniz" required>
+                </div>
+                <div class="form-row">
+                   
+                    <select>
+                        <option value="">Hizmet Seçiniz</option>
+                        <option value="bireysel">Bireysel Terapi</option>
+                        <option value="aile">Aile ve Çift Terapisi</option>
+                        <option value="aile">Ergen Terapisi</option>
+                        <option value="aile">Çocuk Terapisi</option>
+                        <option value="aile">Online Terapi</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <textarea rows="4" placeholder="Mesajınız..."></textarea>
+                </div>
+                <button type="submit" class="btn-premium">Randevu Talebi Gönder</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+
+
+        
+
+    <script src="script.js"></script>
+
+
+    <footer>
+    <div class="footer-container container">
+        <div class="footer-box">
+            <div class="logo">Psiko<span>Destek</span></div>
+            <p> uzman kadromuzla yanınızdayız. Ruh sağlığınız bizim önceliğimizdir.</p>
+        </div>
+
+        <div class="footer-box">
+            
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+                <li><a href="sikcasorulansorular.html">Sıkça Sorulan Sorular</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h3>İletişim</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Ankara Çankaya</p>
+            <p><i class="fas fa-phone"></i> +90 532 532 00 00</p>
+            <p><i class="fas fa-envelope"></i> yildiz@psikodestek.com</p>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 PsikoDestek - Tüm Hakları Saklıdır.</p>
+    </div>
+</footer>
+
+
+
+
+<script>
+document.getElementById('appointment-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Sayfanın yenilenmesini engeller
+
+    // Formun olduğu kutuyu seçiyoruz
+    const formContainer = document.querySelector('.iletisim-form-kutusu');
+    
+    // Formun içeriğini temizleyip başarı mesajını yazıyoruz
+    formContainer.innerHTML = `
+        <div style="text-align: center; padding: 40px 20px;">
+            <div style="font-size: 50px; color: #5dade2; margin-bottom: 20px;">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 style="color: #2c3e50; margin-bottom: 15px;">Mesajınız Başarıyla Alındı!</h3>
+            <p style="color: #7f8c8d; line-height: 1.6;">
+                Bize ulaştığınız için teşekkür ederiz. Uzman ekibimiz mesajınızı inceleyip en kısa sürede size geri dönüş sağlayacaktır.
+            </p>
+            <button onclick="location.reload()" style="margin-top: 25px; background: none; border: 1px solid #5dade2; color: #5dade2; padding: 10px 20px; border-radius: 8px; cursor: pointer;">
+                Yeni Mesaj Gönder
+            </button>
+        </div>
+    `;
+});
+</script>
+
+
+<script src="assets/js/script.js"></script>
+
+
+
+
+</body>
+</html>
