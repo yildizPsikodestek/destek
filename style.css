@@ -628,4 +628,36 @@ footer {
     border-top: 1px solid #f0f0f0; /* Zarif bir ayırıcı çizgi */
 }
 
+@media (max-width: 768px) {
+    /* Menü kısmını dikey yapalım ki kaymasın */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Yazı boyutlarını biraz büyütelim */
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    /* Resimlerin ekrana tam sığmasını sağlayalım */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 
