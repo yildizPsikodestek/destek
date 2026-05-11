@@ -675,6 +675,12 @@ footer {
         max-width: 100%;
         height: auto;
     }
+
+    .hero {
+    height: auto !important; /* Mavi alanın boyunu sabitleme, içeriğe göre uzasın */
+    padding-top: 100px !important; /* Menü dikey olduğu için yazıların üstüne binmesin */
+    min-height: 400px;
+}
 }
 
 
