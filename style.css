@@ -643,12 +643,17 @@ footer {
         flex-direction: column; 
         padding: 10px;
         background-color: white; 
-        position: relative;
+        position: relative !important;
         z-index: 1000;
         display: flex !important; /* Flex olduğundan emin olalım */
         align-items: center;
         width: 100%;
     }
+
+    .hero {
+    margin-top: 0 !important; 
+    padding-top: 50px !important; 
+}
 
     /* 2. Menü kısmını dikey ve hizalı yapalım */
     nav ul {
@@ -687,6 +692,7 @@ footer {
         max-width: 100%;
         height: auto;
     }
+
 
   
 }
