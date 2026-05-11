@@ -628,6 +628,15 @@ footer {
     border-top: 1px solid #f0f0f0; /* Zarif bir ayırıcı çizgi */
 }
 
+
+.hero {
+    height: auto !important; /* Mavi alanın boyunu sabitleme, içeriğe göre uzasın */
+    padding-top: 100px !important; /* Menü dikey olduğu için yazıların üstüne binmesin */
+    min-height: 400px;
+}
+
+
+
 @media (max-width: 768px) {
     /* 1. Header'ı dikey yapıp beyaz alanın içinde tutalım */
     header {
@@ -636,6 +645,9 @@ footer {
         background-color: white; 
         position: relative;
         z-index: 1000;
+        display: flex !important; /* Flex olduğundan emin olalım */
+        align-items: center;
+        width: 100%;
     }
 
     /* 2. Menü kısmını dikey ve hizalı yapalım */
@@ -676,11 +688,7 @@ footer {
         height: auto;
     }
 
-    .hero {
-    height: auto !important; /* Mavi alanın boyunu sabitleme, içeriğe göre uzasın */
-    padding-top: 100px !important; /* Menü dikey olduğu için yazıların üstüne binmesin */
-    min-height: 400px;
-}
+  
 }
 
 
